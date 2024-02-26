@@ -270,6 +270,28 @@
   line-height: 64px;
   padding: 0 33px;
 }
+.button-buy-now,
+.button-follow-us {
+    padding: 10px 20px; /* Adjust padding as needed */
+    font-size: 16px; /* Base font size */
+    text-align: center;
+    border: 2px solid transparent; /* Example border, adjust as needed */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    text-decoration: none; /* Remove underline from links */
+    color: #fff; /* Inherit text color from parent */
+}
+
+/* Specific adjustments for screen widths below 500px */
+@media (max-width: 500px) {
+    .button-buy-now,
+    .button-follow-us {
+        width: 100%; /* Make buttons full width */
+    }
+
+    .button-buy-now {
+        margin-bottom: 10px; /* Ensure there's space between the buttons */
+    }
+}
 
 .tf-button-st2 {
   -webkit-transition: all 0.3s ease;
