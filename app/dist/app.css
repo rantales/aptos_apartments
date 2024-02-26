@@ -429,7 +429,7 @@
 /* Further adjustments for very small screens or high zoom */
 @media screen and (max-width: 480px), (min-resolution: 150dpi) {
   .header__logo img {
-      width: 30vw; /* Adjust the width to a suitable size for very small screens or high zoom levels */
+      width: 10vw; /* Adjust the width to a suitable size for very small screens or high zoom levels */
   }
 }
 
