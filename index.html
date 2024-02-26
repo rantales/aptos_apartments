@@ -29,6 +29,20 @@
             max-width: 600px; /* Adjust based on your preference */
             height: auto !important;
         }
+        /* Hide mobile logo on desktop */
+        .logo-mobile {
+            display: none;
+        }
+
+        /* Mobile view */
+        @media (max-width: 865px) {
+            .logo-desktop {
+                display: none; /* Hide desktop logo */
+            }
+            .logo-mobile {
+                display: block; /* Show mobile logo */
+            }
+        }
     </style>
 </head>
 <body class="header-fixed main">
@@ -39,8 +53,11 @@
         <div class="container">
             <div id="site-header-inner">
                 <div class="header__logo">
-                    <a href="index.html"><img src="assets/images/logo/logo.png" alt=""></a>
+                    <a href="index.html">
+                        <img src="assets/images/logo/logo.png" alt="" id="logoImage">
+                    </a>
                 </div>
+                
                 <nav id="main-nav" class="main-nav">
                     <ul id="menu-primary-menu" class="menu">
                         <li class="menu-item  current-menu-item">
@@ -304,10 +321,44 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="swiper-container sl-parner">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="image">
+                                <img src="assets/images/partners/6.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="image">
+                                <img src="assets/images/partners/2.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="image">
+                                <img src="assets/images/partners/3.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="image">
+                                <img src="assets/images/partners/4.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="image">
+                                <img src="assets/images/partners/5.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="image">
+                                <img src="assets/images/partners/7.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-    
 
     <footer id="footer">
         <div class="footer-main">
@@ -398,13 +449,15 @@
      <script>
         // Data for the Pie Chart
         const data = {
-            labels: ['Community 90%', 'Staking 10%'],
+            labels: ['80% Community', '5% Exchange lisitngs', '5% Team', '10% NFT Staking'],
             
             datasets: [{
-                data: [90, 10],
+                data: [80, 5, 5, 10],
                 backgroundColor: [
-                    '#007aff',
-                    '#10b4f8',
+                    '#149fc2',
+                    '#7FC7D9',
+                    '#0F1035',
+                    '#365486',
                 ],
                 hoverOffset: 4
             }]
@@ -455,7 +508,7 @@
         "home": "HOME",
         "nft": "NFT",
         "tokenomics": "TOKENOMICS",
-        "langSwitch": "LANG EN/KR",
+        "langSwitch": "EN/KR",
         "apartmentDescription": "Apartment - Maybe one day you’ll have a house.",
         "apartmentDescription2": "Apartment is the embodiment of the hopium us degenerates posses.",
         "buyNow": "BUY NOW",
@@ -474,7 +527,7 @@
         "home": "홈",
         "nft": "NFT",
         "tokenomics": "토큰 이코노미",
-        "langSwitch": "언어 EN/KR",
+        "langSwitch": "EN/KR",
         "apartmentDescription": "아파트 - 언젠가 당신은 집을 가질 것입니다.",
         "apartmentDescription2": "아파트는 우리가 가지고 있는 희망의 구현입니다.",
         "buyNow": "지금 구매하기",
@@ -508,13 +561,33 @@
                 // Update the button text to reflect the current language state
                 const languageText = document.getElementById('languageText');
                 if (languageText) {
-                    languageText.innerText = `LANG ${currentLang}/` + ((currentLang === 'EN') ? 'KR' : 'EN');
+                    languageText.innerText = `${currentLang}/` + ((currentLang === 'EN') ? 'KR' : 'EN');
                 }
             }
 
             // Initial call to set the website to the default language
             toggleLanguage();
         </script>
-        
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+    var logoImage = document.getElementById('logoImage');
+    var mobileLogo = "assets/images/logo/logo-mobile.png"; // Path to mobile logo
+    var desktopLogo = "assets/images/logo/logo.png"; // Path to desktop logo
+
+    function updateLogo() {
+        if (window.innerWidth <= 768) { // Mobile view
+            logoImage.src = mobileLogo;
+        } else { // Desktop view
+            logoImage.src = desktopLogo;
+        }
+    }
+
+    // Run on initial load
+    updateLogo();
+
+    // Run on window resize
+    window.addEventListener('resize', updateLogo);
+});
+        </script>
 </body>
 </html>
