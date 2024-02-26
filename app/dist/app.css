@@ -278,7 +278,7 @@
     border: 2px solid transparent; /* Example border, adjust as needed */
     transition: all 0.3s ease; /* Smooth transition for hover effects */
     text-decoration: none; /* Remove underline from links */
-    color: #fff; /* Inherit text color from parent */
+    color: #ffF; /* Inherit text color from parent */
 }
 
 /* Specific adjustments for screen widths below 500px */
@@ -411,6 +411,26 @@
 }
 .tf-title.st2 {
   text-align: left;
+}
+.header__logo img {
+  max-width: 100%; /* Ensures the logo is never wider than its container */
+  height: auto; /* Maintains the aspect ratio of the logo */
+  /* Adjust the initial size of the logo as needed */
+  width: 10vw; /* This makes the logo width responsive to the viewport width */
+}
+
+/* Adjust logo size for smaller viewports or when zooming in */
+@media screen and (max-width: 768px), (min-resolution: 120dpi) {
+  .header__logo img {
+      width: 20vw; /* Increase the size on smaller screens if needed, or adjust as necessary */
+  }
+}
+
+/* Further adjustments for very small screens or high zoom */
+@media screen and (max-width: 480px), (min-resolution: 150dpi) {
+  .header__logo img {
+      width: 30vw; /* Adjust the width to a suitable size for very small screens or high zoom levels */
+  }
 }
 
 .post {
