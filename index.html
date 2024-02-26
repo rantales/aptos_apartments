@@ -566,26 +566,5 @@
             // Initial call to set the website to the default language
             toggleLanguage();
         </script>
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-            var logoImage = document.getElementById('logoImage');
-            var mobileLogo = "assets/images/logo/logo-mobile.png"; // Path to mobile logo
-            var desktopLogo = "assets/images/logo/logo.png"; // Path to desktop logo
-
-            function updateLogo() {
-                if (window.innerWidth <= 768) { // Mobile view
-                    logoImage.src = mobileLogo;
-                } else { // Desktop view
-                    logoImage.src = desktopLogo;
-                }
-            }
-
-            // Run on initial load
-            updateLogo();
-
-            // Run on window resize
-            window.addEventListener('resize', updateLogo);
-        });
-        </script>
 </body>
 </html>

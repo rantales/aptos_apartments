@@ -422,14 +422,14 @@
 /* Adjust logo size for smaller viewports or when zooming in */
 @media screen and (max-width: 768px), (min-resolution: 120dpi) {
   .header__logo img {
-      width: 20vw; /* Increase the size on smaller screens if needed, or adjust as necessary */
+      width: 10vw; /* Increase the size on smaller screens if needed, or adjust as necessary */
   }
 }
 
 /* Further adjustments for very small screens or high zoom */
 @media screen and (max-width: 480px), (min-resolution: 150dpi) {
   .header__logo img {
-      width: 10vw; /* Adjust the width to a suitable size for very small screens or high zoom levels */
+      width: 20vw; /* Adjust the width to a suitable size for very small screens or high zoom levels */
   }
 }
 
