@@ -22,6 +22,9 @@
 .header #site-header-inner .tf-button {
   margin-left: auto;
 }
+.header #site-header-inner .lang-button {
+  margin-left: auto;
+}
 .header .main-nav {
   position: absolute;
   left: 31%;
