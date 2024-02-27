@@ -527,6 +527,10 @@
         "termsConditions": "Terms & Conditions",
         "aptosApartments": "Aptos Apartments 2024- ALL Rights Reserved",
         "documentation": "Documentation",
+        "80PercentCommunity": "80% Community",
+        "5PercentExchangeListings": "5% Exchange listings",
+        "5PercentTeam": "5% Team",
+        "10PercentNFTStaking": "10% NFT Staking",
     },
     "KO": {
         "home": "홈",
@@ -547,6 +551,10 @@
         "termsConditions": "이용 약관",
         "aptosApartments": "Aptos 아파트 2024- 모든 권리 보유",
         "documentation": "문서화",
+        "80PercentCommunity": "80% 커뮤니티",
+        "5PercentExchangeListings": "5% 거래소 상장",
+        "5PercentTeam": "5% 팀",
+        "10PercentNFTStaking": "10% NFT 스테이킹",
     }
 };
 
@@ -563,16 +571,27 @@
                         el.innerText = translations[currentLang][key];
                     }
                 });
-                
+                // Update the chart labels
+                const chartLabelKeys = ['80PercentCommunity', '5PercentExchangeListings', '5PercentTeam', '10PercentNFTStaking'];
+                const newChartLabels = chartLabelKeys.map(key => translations[currentLang][key]);
+                updateChartLabels(myResponsivePieChart, newChartLabels); // Implement this function
+
                 // Update the button text to reflect the current language state
                 const languageText = document.getElementById('languageText');
                 if (languageText) {
                     languageText.innerText = `${currentLang}/` + ((currentLang === 'EN') ? 'KR' : 'EN');
                 }
             }
+            
+            // Function to update chart labels
+            function updateChartLabels(chart, newLabels) {
+            chart.data.labels = newLabels;
+            chart.update();
+            }
 
             // Initial call to set the website to the default language
             toggleLanguage();
+            updateChartLabels();
         </script>
         <script>
             document.addEventListener('DOMContentLoaded', function() {
