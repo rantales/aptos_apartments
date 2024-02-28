@@ -210,6 +210,33 @@
 .tf-button .effect {
   display: block;
 }
+/* Styles for the wrapper */
+.copy-wrapper {
+  padding: 10px; /* Adjust the padding as needed */
+  word-break: break-all; /* This will break the text if it's too long for the line */
+  overflow-wrap: break-word; /* This ensures that long words will be broken at the end of the line */
+  max-width: 100%; /* Ensures the wrapper doesn't exceed the width of its parent */
+}
+
+/* Styles for the clickable text element */
+.clickable-text {
+  cursor: pointer;
+  color: #149fc2; /* Example color - adjust as needed */
+  display: inline-block; /* This ensures that the text is treated as a single inline block */
+  max-width: 100%; /* Ensures the text doesn't exceed the width of its wrapper */
+  /* Add additional styles as needed */
+}
+
+/* Default state for full address and mobile text */
+.desktop-text { display: block; }
+.mobile-text { display: none; }
+
+/* Responsive styles for mobile view */
+@media only screen and (max-width: 600px) {
+  .desktop-text { display: none; }
+  .mobile-text { display: block; }
+}
+
 .tf-button .effect::before, .tf-button .effect::after {
   content: "";
   width: 2px;
