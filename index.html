@@ -450,15 +450,17 @@
      <script>
         // Data for the Pie Chart
         const data = {
-            labels: ['80% Community', '5% Exchange lisitngs', '5% Team', '10% NFT Staking'],
+            labels: ['5% Contributors','5% Team ','10% Exchanges ','10% Airdrop ','10% NFT Staking','10% Liquidity','40% Burn'],
             
             datasets: [{
-                data: [80, 5, 5, 10],
+                data: [5, 5, 10, 10, 10, 40],
                 backgroundColor: [
                     '#149fc2',
                     '#7FC7D9',
                     '#0F1035',
                     '#365486',
+                    '#A6D9B9',
+                    '#1E2E47'
                 ],
                 hoverOffset: 4
             }]
@@ -524,10 +526,13 @@
         "termsConditions": "Terms & Conditions",
         "aptosApartments": "Aptos Apartments 2024- ALL Rights Reserved",
         "documentation": "Documentation",
-        "80PercentCommunity": "80% Community",
-        "5PercentExchangeListings": "5% Exchange listings",
+        "5PercentContributors": "5% Contributors",
         "5PercentTeam": "5% Team",
+        "10PercentExchanges": "10% Exchanges",
+        "10PercentAirdrop": "10% Airdrop",
         "10PercentNFTStaking": "10% NFT Staking",
+        "10PercentLiquidity": "10% Liquidity",
+        "40PercentBurn": "40% Burn",
         "contract": "Contract Address:"
     },
     "KO": {
@@ -549,10 +554,13 @@
         "termsConditions": "이용 약관",
         "aptosApartments": "Aptos 아파트 2024- 모든 권리 보유",
         "documentation": "문서화",
-        "80PercentCommunity": "80% 커뮤니티",
-        "5PercentExchangeListings": "5% 거래소 상장",
+        "5PercentContributors": "5% 기여자",
         "5PercentTeam": "5% 팀",
+        "10PercentExchanges": "10% 거래소",
+        "10PercentAirdrop": "10% 에어드랍",
         "10PercentNFTStaking": "10% NFT 스테이킹",
+        "10PercentLiquidity": "10% 유동성",
+        "40PercentBurn": "40% 소각",
         "contract": "계약 주소",
         
     }
@@ -572,7 +580,7 @@
                     }
                 });
                 // Update the chart labels
-                const chartLabelKeys = ['80PercentCommunity', '5PercentExchangeListings', '5PercentTeam', '10PercentNFTStaking'];
+                const chartLabelKeys = ['5PercentContributors', '5PercentTeam', '10PercentExchanges', '10PercentAirdrop', '10PercentNFTStaking', '10PercentLiquidity', '40PercentBurn'];
                 const newChartLabels = chartLabelKeys.map(key => translations[currentLang][key]);
                 updateChartLabels(myResponsivePieChart, newChartLabels); // Implement this function
 
