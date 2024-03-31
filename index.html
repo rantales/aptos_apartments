@@ -450,10 +450,10 @@
      <script>
         // Data for the Pie Chart
         const data = {
-            labels: ['15% Contributors','5% Team ','10% Exchanges ','10% Airdrop ','10% NFT Staking','10% Liquidity','40% Burn'],
+            labels: ['15% Contributors','5% Team ','10% Exchanges ','10% Airdrop ','10% NFT Staking','10% Liquidity','25% Burn','15% Game Rewards'],
             
             datasets: [{
-                data: [15, 5, 10, 10, 10, 10, 40],
+                data: [15, 5, 10, 10, 10, 10, 25, 15],
                 backgroundColor: [
                     '#149fc2',
                     '#7FC7D9',
@@ -461,7 +461,8 @@
                     '#365486',
                     '#A6D9B9',
                     '#1E2E47',
-                    '#8354B3'
+                    '#8354B3',
+                    '#FF9A76',
                 ],
                 hoverOffset: 4
             }]
@@ -533,7 +534,8 @@
         "10PercentAirdrop": "10% Airdrop",
         "10PercentNFTStaking": "10% NFT Staking",
         "10PercentLiquidity": "10% Liquidity",
-        "40PercentBurn": "40% Burn",
+        "25PercentBurn": "25% Burn",
+        "15PercentGameRewards": "15% Game Rewards",
         "contract": "Contract Address:"
     },
     "KO": {
@@ -561,7 +563,8 @@
         "10PercentAirdrop": "10% 에어드랍",
         "10PercentNFTStaking": "10% NFT 스테이킹",
         "10PercentLiquidity": "10% 유동성",
-        "40PercentBurn": "40% 소각",
+        "25PercentBurn": "25% 소각",
+        "15PercentGameRewards": "15% 소각",
         "contract": "계약 주소",
         
     }
@@ -581,7 +584,7 @@
                     }
                 });
                 // Update the chart labels
-                const chartLabelKeys = ['5PercentContributors', '5PercentTeam', '10PercentExchanges', '10PercentAirdrop', '10PercentNFTStaking', '10PercentLiquidity', '40PercentBurn'];
+                const chartLabelKeys = ['5PercentContributors', '5PercentTeam', '10PercentExchanges', '10PercentAirdrop', '10PercentNFTStaking', '10PercentLiquidity', '25PercentBurn', '15PercentGameRewards'];
                 const newChartLabels = chartLabelKeys.map(key => translations[currentLang][key]);
                 updateChartLabels(myResponsivePieChart, newChartLabels); // Implement this function
 
